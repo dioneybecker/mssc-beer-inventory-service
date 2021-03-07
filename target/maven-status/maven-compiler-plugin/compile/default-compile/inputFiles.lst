@@ -1,9 +1,21 @@
-/workspaces/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/domain/BeerInventory.java
-/workspaces/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/web/mappers/DateMapper.java
-/workspaces/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/domain/BaseEntity.java
-/workspaces/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/BeerInventoryApplication.java
-/workspaces/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/web/mappers/BeerInventoryMapper.java
-/workspaces/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/web/model/BeerInventoryDto.java
-/workspaces/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/repositories/BeerInventoryRepository.java
-/workspaces/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/bootstrap/BeerInvntoryBootstrap.java
-/workspaces/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/web/controllers/BeerInventoryController.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\config\LocalDiscovery.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\services\NewInventorySQSListener.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\brewery\model\BeerDto.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\brewery\model\BeerPagedList.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\web\mappers\DateMapper.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\web\model\BeerInventoryDto.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\bootstrap\BeerInvntoryBootstrap.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\domain\BaseEntity.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\repositories\BeerInventoryRepository.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\web\controllers\BeerInventoryController.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\brewery\model\events\NewInventoryEvent.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\brewery\model\BeerStyleEnum.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\domain\BeerInventory.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\web\mappers\BeerInventoryMapper.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\BeerInventoryApplication.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\config\JmsConfig.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\brewery\model\events\BrewBeerEvent.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\brewery\model\events\BeerEvent.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\config\AwsSqsConfig.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\brewery\model\CustomerDto.java
+C:\Users\DIONEYFERNANDOBECKER\Documents\courses\Microservices with Spring Boot\mssc-brewery\mssc-beer-inventory-service\src\main\java\com\dioneybecker\beerinventoryservice\services\NewInventoryListener.java
