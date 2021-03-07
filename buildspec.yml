@@ -25,8 +25,9 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
       - aws ecr get-login-password --region sa-east-1 | docker login --username AWS --password-stdin 868240383494.dkr.ecr.sa-east-1.amazonaws.com
-      - docker push $REPOSITORY_URI:latest
-      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      # - docker push $REPOSITORY_URI:latest
+      # - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - mvn docker:pull
       - echo Writing image definitions file...
       - printf '[{"name":"mssc-beer-inventory-service","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
