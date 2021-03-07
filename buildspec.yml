@@ -19,12 +19,12 @@ phases:
       - echo Building the Docker image...
       # - docker build -t $REPOSITORY_URI:latest . --no-cache
       # - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
-      - aws ecr get-login-password --region sa-east-1 | docker login --username AWS --password-stdin 868240383494.dkr.ecr.sa-east-1.amazonaws.com
       - mvn docker:build
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
+      - aws ecr get-login-password --region sa-east-1 | docker login --username AWS --password-stdin 868240383494.dkr.ecr.sa-east-1.amazonaws.com
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
