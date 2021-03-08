@@ -7,7 +7,7 @@
 		<artifactId>mssc-brewery-bom</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-    <groupId>guru.springframework</groupId>
+    <groupId>com.dioneybecker</groupId>
     <artifactId>mssc-beer-inventory-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>mssc-beer-inventory-service</name>

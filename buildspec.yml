@@ -26,12 +26,12 @@ phases:
       - echo Pushing the Docker images...
       # - docker push $REPOSITORY_URI:latest
       # - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - mvn docker:pull
+      - mvn docker:push
       - echo Writing image definitions file...
       - printf '[{"name":"mssc-beer-inventory-service","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
     files: 
-      - target/mssc-beer-inventory-service-0.0.1-SNAPSHOT.jar
+      # - target/mssc-beer-inventory-service-0.0.1-SNAPSHOT.jar
       - imagedefinitions.json
       - Dockerrun.aws.json
 deploy:
