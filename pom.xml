@@ -31,4 +31,25 @@
             <artifactId>spring-cloud-starter-aws-messaging</artifactId>
         </dependency>
     </dependencies>
+    
+    <build>
+        <extensions>
+            <extension>
+                <groupId>com.allogy.maven.wagon</groupId>
+                <artifactId>maven-s3-wagon</artifactId>
+                <version>1.2.0</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>brewery-bucket-snapshot</id>
+            <url>s3://brewery-repo-bom/snapshot</url>
+        </repository>
+        <repository>
+            <id>brewery-bucket-release</id>
+            <url>s3://brewery-repo-bom/release</url>
+        </repository>
+    </repositories>
 </project>
