@@ -141,3 +141,13 @@ Desktop.ini
 .eslintcache
 /.idea/
 
+### VS Code ###
+.vscode/
+/Dockerfile_old
+/.devcontainer
+/.settings
+/.sts4-cache
+/.vscode
+/target
+/mvnw.cmd
+/mvnw
