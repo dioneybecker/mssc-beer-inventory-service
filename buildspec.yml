@@ -37,3 +37,7 @@ artifacts:
       - Dockerrun.aws.json
 deploy:
     artifact: Dockerrun.aws.json
+
+cache:
+  paths:
+    - '/root/.m2/**/*'
