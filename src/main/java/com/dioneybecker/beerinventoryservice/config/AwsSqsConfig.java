@@ -39,8 +39,8 @@ public class AwsSqsConfig {
     @Primary
     @Bean
     public AmazonSQSAsync amazonQSQAsync() {
-        log.info("Access Key" + accessKey);
-        
+        log.info("Secret Key: " + secretKey);
+
         return AmazonSQSAsyncClientBuilder.standard().withRegion(Regions.SA_EAST_1)
                 .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, secretKey)))
                 .build();
