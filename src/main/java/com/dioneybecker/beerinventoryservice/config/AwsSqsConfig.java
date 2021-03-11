@@ -2,6 +2,7 @@ package com.dioneybecker.beerinventoryservice.config;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.auth.AWS4Signer;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.sqs.AmazonSQSAsync;
 import com.amazonaws.services.sqs.AmazonSQSAsyncClientBuilder;
@@ -39,8 +40,9 @@ public class AwsSqsConfig {
     @Primary
     @Bean
     public AmazonSQSAsync amazonQSQAsync() {
-        log.info("Secret Key: " + secretKey);
-
+        //AWS4-HMAC-SHA256
+        //AWS4Signer signer = new AWS4Signer();
+        
         return AmazonSQSAsyncClientBuilder.standard().withRegion(Regions.SA_EAST_1)
                 .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, secretKey)))
                 .build();
