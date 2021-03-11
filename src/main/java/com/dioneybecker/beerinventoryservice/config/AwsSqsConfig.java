@@ -13,6 +13,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Profile("awsdev")
 @Configuration
 public class AwsSqsConfig {
@@ -36,6 +39,8 @@ public class AwsSqsConfig {
     @Primary
     @Bean
     public AmazonSQSAsync amazonQSQAsync() {
+        log.info("Access Key" + accessKey);
+        
         return AmazonSQSAsyncClientBuilder.standard().withRegion(Regions.SA_EAST_1)
                 .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, secretKey)))
                 .build();
