@@ -17,8 +17,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class ServiceDiscovery {
 
     @Bean
-    @Autowired
-    @Profile("awsdev")
+    @Profile("!default")
     public EurekaInstanceConfigBean eurekaInstanceConfigBean(InetUtils inetUtils) {
         EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(inetUtils);
         AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("eureka");
@@ -27,6 +26,5 @@ public class ServiceDiscovery {
         config.setDataCenterInfo(info);
         return config;      
     }
-    
 }
 
