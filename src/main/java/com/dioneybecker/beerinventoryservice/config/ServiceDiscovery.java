@@ -25,11 +25,11 @@ public class ServiceDiscovery {
 
         log.info("Public Hostname: " +  info.get(AmazonInfo.MetaDataKey.publicHostname));
         log.info("Public IPv4: " + info.get(AmazonInfo.MetaDataKey.publicIpv4));
-
+        
         config.setHostname(info.get(AmazonInfo.MetaDataKey.publicHostname));
         config.setIpAddress(info.get(AmazonInfo.MetaDataKey.publicIpv4));
-        config.setSecurePort(8280);
-        //config.setNonSecurePort(8280);
+        config.setSecurePort(8082);
+        config.setNonSecurePort(8082);
         config.setDataCenterInfo(info);
         return config;      
     }
