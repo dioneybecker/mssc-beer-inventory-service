@@ -9,20 +9,27 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import lombok.extern.slf4j.Slf4j;
 
-
-
+@Profile("awsdev")
+@Slf4j
 @EnableDiscoveryClient
 @Configuration
 public class ServiceDiscovery {
 
     @Bean
-    @Profile("!default")
+    @Profile("awsdev")
     public EurekaInstanceConfigBean eurekaInstanceConfigBean(InetUtils inetUtils) {
         EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(inetUtils);
         AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("eureka");
+
+        log.info("Public Hostname: " +  info.get(AmazonInfo.MetaDataKey.publicHostname));
+        log.info("Public IPv4: " + info.get(AmazonInfo.MetaDataKey.publicIpv4));
+
         config.setHostname(info.get(AmazonInfo.MetaDataKey.publicHostname));
         config.setIpAddress(info.get(AmazonInfo.MetaDataKey.publicIpv4));
+        config.setSecurePort(8280);
+        //config.setNonSecurePort(8280);
         config.setDataCenterInfo(info);
         return config;      
     }
