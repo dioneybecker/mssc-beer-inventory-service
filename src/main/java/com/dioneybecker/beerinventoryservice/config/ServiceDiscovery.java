@@ -17,21 +17,21 @@ import lombok.extern.slf4j.Slf4j;
 @Configuration
 public class ServiceDiscovery {
 
-    @Bean
-    @Profile("awsdev")
-    public EurekaInstanceConfigBean eurekaInstanceConfigBean(InetUtils inetUtils) {
-        EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(inetUtils);
-        AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("eureka");
+    // @Bean
+    // @Profile("awsdev")
+    // public EurekaInstanceConfigBean eurekaInstanceConfigBean(InetUtils inetUtils) {
+    //     EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(inetUtils);
+    //     AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("eureka");
 
-        log.info("Public Hostname: " +  info.get(AmazonInfo.MetaDataKey.publicHostname));
-        log.info("Public IPv4: " + info.get(AmazonInfo.MetaDataKey.publicIpv4));
+    //     log.info("Public Hostname: " +  info.get(AmazonInfo.MetaDataKey.publicHostname));
+    //     log.info("Public IPv4: " + info.get(AmazonInfo.MetaDataKey.publicIpv4));
         
-        config.setHostname(info.get(AmazonInfo.MetaDataKey.publicHostname));
-        config.setIpAddress(info.get(AmazonInfo.MetaDataKey.publicIpv4));
-        config.setSecurePort(8082);
-        config.setNonSecurePort(8082);
-        config.setDataCenterInfo(info);
-        return config;      
-    }
+    //     config.setHostname(info.get(AmazonInfo.MetaDataKey.publicHostname));
+    //     config.setIpAddress(info.get(AmazonInfo.MetaDataKey.publicIpv4));
+    //     config.setSecurePort(8082);
+    //     config.setNonSecurePort(8082);
+    //     config.setDataCenterInfo(info);
+    //     return config;      
+    // }
 }
 
